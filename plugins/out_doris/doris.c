@@ -144,7 +144,6 @@ static int http_put(struct flb_out_doris *ctx,
     /* Append headers */
     flb_http_add_header(c, "format", 6, "json", 4);
     flb_http_add_header(c, "read_json_by_line", 17, "true", 4);
-    flb_http_add_header(c, "Expect", 6, "100-continue", 12);
     flb_http_add_header(c, "User-Agent", 10, "Fluent-Bit", 10);
     
     if (ctx->add_label) {
